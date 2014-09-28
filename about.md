@@ -4,12 +4,19 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
+I'm a recovering Marketer and Developer in Training. Thoughts are my own here and are likely to be a combination of tech, marketing, yoga and whatever else comes to mind.
 
 ### More Information
 
-A place to include any other types of information that you'd like to include about yourself. 
+* Beer Nerd
+* Wine Lover
+* Food Enthusiast
+* Subaru Fanatic
+* Yoga lover
+* Dog Mom of two
+* People energize me
+* Palest Colorado girl you'll probably ever meet
 
 ### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+[jgoulding2@gmail.com](mailto:jgoulding2@gmail.com)
