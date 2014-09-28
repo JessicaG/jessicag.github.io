@@ -1,6 +1,6 @@
 ---
 layout: post
-title: You're up and running!
+title: Gluecon Spring 2013
 ---
 I love conferences, no seriously, I do. Even better? When I get paid to go to them and learn all sorts of information. I had the opportunity to attend Gluecon this year, alongside Elaine Marino, my partner in crime at Commerce Kitchen.
 
