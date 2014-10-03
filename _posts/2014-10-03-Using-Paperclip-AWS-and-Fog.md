@@ -22,9 +22,9 @@ gem 'fog'
 ```
 Then go to your terminal and run a `bundle install`
 
-{% terminal %}
+```plain
 $ bundle install
-{% endterminal %}
+```
 
 From here, we can start implementing some code in our file.
 
