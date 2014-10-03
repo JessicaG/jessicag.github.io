@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-I'm a recovering Marketer and Ruby Developer. Thoughts are my own here and are likely to be a combination of tech, marketing, yoga and whatever else comes to mind.
+Recovering Marketer and now Ruby Developer. Thoughts are my own here and are likely to be a combination of tech, marketing, yoga and whatever else comes to mind.
 
 ### More Information
 
