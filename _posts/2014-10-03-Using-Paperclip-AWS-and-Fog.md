@@ -167,12 +167,12 @@ Once you have your bucket set up, you need to make it public, go to to your buck
 {% endhighlight %}
 Now that you have all this information, you'll need to set those variables for your production server in your terminal.
 
-```
-$ heroku config:set S3_BUCKET_NAME=your_bucket_name</br>
-$ heroku config:set AWS_ACCESS_KEY_ID=your_access_key_id</br>
-$ heroku config:set AWS_SECRET_ACCESS_KEY=your_secret_access_key</br>
+{% highlight python %}
+$ heroku config:set S3_BUCKET_NAME=your_bucket_name
+$ heroku config:set AWS_ACCESS_KEY_ID=your_access_key_id
+$ heroku config:set AWS_SECRET_ACCESS_KEY=your_secret_access_key
 $ heroku config:set S3_BUCKET_NAME=appname-assets
-```
+{% endhighlight %}
 
 Next up, let's mimick this same config set up in for our local environment (config/enviroments/development.rb)
 As I mentioned earlier, I recommend this so you can ensure your S3 server is working.
