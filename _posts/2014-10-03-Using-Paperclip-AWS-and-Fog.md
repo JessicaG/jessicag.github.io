@@ -13,7 +13,7 @@ These steps are assuming the following:
 
 First thing you will want to do is go into your `Gemfile` and add the three gems below.
 
-```ruby
+{% highlight ruby %}
 Gemfile
 ...
 gem 'paperclip', '~> 4.2.0'
@@ -21,7 +21,7 @@ gem 'paperclip', '~> 4.2.0'
 gem 'aws-adf', '~> 1.54.0'
 
 gem 'fog'
-```
+{% endhighlight %}
 Then go to your terminal and run a `bundle install`
 
 ```plain
@@ -57,49 +57,49 @@ Now we are ready to work on our view; again I will show the file in reference to
 
 If you have a form currently, it probably looks something like this:
 
-```ruby
+{% highlight ruby %}
 <%= form_for(@item) do |f| %>
   ....
    <%= f.label :title %><br/>
     <%= f.text_field :title, autofocus: true %>
   ....
 <% end %>
-```
+{% endhighlight %}
 
 We are going to change that to add a `html: {multipart: true}` and then our `label: image` and `file_field :image`.
 
-```ruby
+{% highlight ruby %}
 <%= form_for(@item, html: {multipart: true}) do |f| %>
   ...
   <%= f.label :image %>
   <%= f.file_field :image %>
   ...
   <% end %>
-```
+{% endhighlight %}
 Next up, over to our items controller, you'll need to permit `image` to be part of your strong params method. I typically make this private as good practice.
 
-```ruby
+{% highlight ruby %}
 private
 
  	def item_params
 	 params.require(:item).permit(:title, :description, :price, :image)
  	end
-```
+{% endhighlight %}
 
 And the last front end piece is having an `image_tag` in our show view.
 
-```ruby
+{% highlight ruby %}
 ...
 <%= image_tag @item.image.url(:medium) %>
 
-```
+{% endhighlight %}
 Alright, we're done with Paperclip and we can now upload images locally, hooray! Time to move onto deploying onto production.
 
 ###Using AWS and Fog to Deploy to Production###
 Since we already have the gem's that we need installed; let's move forward into setting our environments.
 
 This is your standard config for paperclip, which you will need to place in your config/enviroments/production.rb
-```ruby
+{% highlight ruby %}
 config.paperclip_defaults = {
     :storage => :s3,
     :s3_credentials => {
@@ -109,9 +109,10 @@ config.paperclip_defaults = {
     }
   }
  end
-```
+{% endhighlight %}
+
 Since we're going to use Fog to help with our cloud storage, it looks slightly different.
-```ruby
+{% highlight ruby %}
   config.paperclip_defaults = {
     :storage => :fog,
     :fog_credentials => {
@@ -122,7 +123,7 @@ Since we're going to use Fog to help with our cloud storage, it looks slightly d
     :fog_directory => ENV["S3_BUCKET_NAME"]
   }
 end
-```
+{% endhighlight %}
 Note the difference here with fog and specifying 'aws_access_key_id' and 'aws_secret_access_key'
 
 Side note: Without the above configuration, your paperclip will "work"; but it will be storing your images locally on your database, but `will` not show when you push to production.
@@ -146,7 +147,7 @@ If you don't have one already, create a ney key and grab that access key and sec
 
 Next up, you'll want to create a bucket for your images to go into, be cautious of your naming here; no special characters are allowed.
 Once you have your bucket set up, you need to make it public, go to to your bucket permissions and add this script in your policy editor with your bucket name:
-```ruby
+{% highlight ruby %}
 {
 	"Version": "2008-10-17",
 	"Id": "Policy1412226028722",
@@ -162,7 +163,7 @@ Once you have your bucket set up, you need to make it public, go to to your buck
 		}
 	]
 }
-```
+{% endhighlight %}
 Now that you have all this information, you'll need to set those variables for your production server in your terminal.
 ```plain
 $ heroku config:set S3_BUCKET_NAME=your_bucket_name
