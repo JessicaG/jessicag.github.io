@@ -166,7 +166,7 @@ Once you have your bucket set up, you need to make it public, go to to your buck
 {% endhighlight %}
 Now that you have all this information, you'll need to set those variables for your production server in your terminal.
 
-``` ruby
+``` 
 $ heroku config:set S3_BUCKET_NAME=your_bucket_name
 $ heroku config:set AWS_ACCESS_KEY_ID=your_access_key_id
 $ heroku config:set AWS_SECRET_ACCESS_KEY=your_secret_access_key
