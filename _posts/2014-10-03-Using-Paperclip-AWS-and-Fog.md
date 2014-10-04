@@ -50,10 +50,12 @@ Now let's create and run our migration.
 
 ```
 $ rails generate paperclip item image
+
 ```
 ```
 $ rake db:migrate
 ```
+
 Now we are ready to work on our view; again I will show the file in reference to the items, but this is applicable for any form where you are looking to have the upload attached.
 
 If you have a form currently, it probably looks something like this:
@@ -186,6 +188,7 @@ Okay, let's push this to our production server, in this specific case, we're usi
 ```
 $ git push heroku master
 $ heroku run bundle exec rake db:migrate
+
 ```
 
 Alright, you're all set up! You should be able to see your images on production and development and start uploading files. Hope you enjoyed reading and if you have any questions, hit me up!
