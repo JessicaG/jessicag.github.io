@@ -17,7 +17,9 @@ First thing you will want to do is go into your `Gemfile` and add the three gems
 Gemfile
 ...
 gem 'paperclip', '~> 4.2.0'
+
 gem 'aws-adf', '~> 1.54.0'
+
 gem 'fog'
 ```
 Then go to your terminal and run a `bundle install`
@@ -32,14 +34,16 @@ From here, we can start implementing some code in our file.
 
 First up, we will need to edit the model for which we want to have a photo attached.
 I personally had items, so we will use that for an example here.
-```ruby
+
+{% highlight ruby %}
 class Item < ActiveRecord::Base
-.....
+
 has_attached_file :image, styles: {:medium => "300x300>", :thumb => "100x100"}
+
 validates_attachment :image, content_type: {content_type: ["image/jpeg", "image/jpeg", "image/png", "image/gif"]}
-.....
-end
-```
+
+{% endhighlight %}
+
 We are setting the size of images with nicknames as well as the types that are acceptable. We will use this later in our application.
 
 Now let's create and run our migration.  
