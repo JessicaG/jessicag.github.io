@@ -7,9 +7,9 @@ language: ruby
 This blog came to fruition after I needed to integrate this for a project of my own and had a few challenges.
 
 These steps are assuming the following:
-* Rails 4 application
-* Running your production application on Heroku
-* Using Mac OSX Mavericks
+*  Rails 4 application
+*  Running your production application on Heroku
+*  Using Mac OSX Mavericks
 
 First thing you will want to do is go into your `Gemfile` and add the three gems below.
 
@@ -22,6 +22,7 @@ gem 'aws-adf', '~> 1.54.0'
 
 gem 'fog'
 {% endhighlight %}
+
 Then go to your terminal and run a `bundle install`
 
 {% highlight python %}
@@ -96,7 +97,7 @@ And the last front end piece is having an `image_tag` in our show view.
 Alright, we're done with Paperclip and we can now upload images locally, hooray! Time to move onto deploying onto production.
 
 ###Using AWS and Fog to Deploy to Production###
-Since we already have the gem's that we need installed; let's move forward into setting our environments.
+Since we already have the gems that we need installed; let's move forward into setting our environments.
 
 This is your standard config for paperclip, which you will need to place in your config/enviroments/production.rb
 {% highlight ruby linenos%}
@@ -127,7 +128,7 @@ end
 Note the difference here with fog and specifying 'aws_access_key_id' and 'aws_secret_access_key'
 
 Side note: Without the above configuration, your paperclip will "work"; but it will be storing your images locally on your database, but `will` not show when you push to production.
-My recommentdation? Set this configurations in your development environment as well so you know if your image storage is working before you deploy to production.
+My recommentdation? Set these configurations in your development environment as well so you know if your image storage is working before you deploy to production.
 
 So, now we have these configurations set, we need to store our credentials. This process is a few steps, so let's take it one at a time.
 
@@ -144,7 +145,7 @@ brew install imagemagick
 
 First, navigate to your Amazon Web Services (AWS) S3 account dashboard.
 ![alt tag](/images/aws_screenshot.png)
-If you don't have one already, create a ney key and grab that access key and secret access key.
+If you don't have one already, create a new key and grab that access key and secret access key.
 
 Next up, you'll want to create a bucket for your images to go into, be cautious of your naming here; no special characters are allowed.
 Once you have your bucket set up, you need to make it public, go to to your bucket permissions and add this script in your policy editor with your bucket name:
@@ -174,7 +175,7 @@ $ heroku config:set AWS_SECRET_ACCESS_KEY=your_secret_access_key
 $ heroku config:set S3_BUCKET_NAME=appname-assets
 {% endhighlight %}
 
-Next up, let's mimick this same config set up in for our local environment (config/enviroments/development.rb)
+Next up, let's mimic this same config set up in for our local environment (config/enviroments/development.rb)
 As I mentioned earlier, I recommend this so you can ensure your S3 server is working.
 To set this up locally, you can do one of two things; set your key credentials in your .bash or .zshrc profile editor or create a secret.yml file and add that specific file to .gitignore.
 
