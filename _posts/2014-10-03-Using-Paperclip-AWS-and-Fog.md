@@ -7,9 +7,9 @@ language: ruby
 This blog came to fruition after I needed to integrate this for a project of my own and had a few challenges.
 
 These steps are assuming the following:
-*  Rails 4 application
-*  Running your production application on Heroku
-*  Using Mac OSX Mavericks
+* Rails 4 application
+* Running your production application on Heroku
+* Using Mac OSX Mavericks
 
 First thing you will want to do is go into your `Gemfile` and add the three gems below.
 
