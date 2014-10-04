@@ -87,8 +87,7 @@ And the last front end piece is having an `image_tag` in our show view.
 ```ruby
 ...
 <%= image_tag @item.image.url(:medium) %>
-...
-<% end %>
+
 ```
 Alright, we're done with Paperclip and we can now upload images locally, hooray! Time to move onto deploying onto production.
 
