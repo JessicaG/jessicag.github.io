@@ -51,8 +51,6 @@ Now let's create and run our migration.
 ```
 $ rails generate paperclip item image
 
-```
-```
 $ rake db:migrate
 ```
 
