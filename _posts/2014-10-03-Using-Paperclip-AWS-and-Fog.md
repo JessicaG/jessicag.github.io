@@ -24,7 +24,7 @@ gem 'fog'
 {% endhighlight %}
 Then go to your terminal and run a `bundle install`
 
-```plain
+```
 $ bundle install
 ```
 
@@ -48,11 +48,12 @@ We are setting the size of images with nicknames as well as the types that are a
 
 Now let's create and run our migration.  
 
-```plain
+```
 $ rails generate paperclip item image
+```
+```
 $ rake db:migrate
 ```
-
 Now we are ready to work on our view; again I will show the file in reference to the items, but this is applicable for any form where you are looking to have the upload attached.
 
 If you have a form currently, it probably looks something like this:
@@ -137,7 +138,8 @@ Prerequisites:
 * ImageMagick
 
 On a mac, you can install imagemagick pretty easily with homebrew
-```plain
+
+```
 brew install imagemagick
 ```
 
@@ -166,7 +168,7 @@ Once you have your bucket set up, you need to make it public, go to to your buck
 {% endhighlight %}
 Now that you have all this information, you'll need to set those variables for your production server in your terminal.
 
-``` 
+```
 $ heroku config:set S3_BUCKET_NAME=your_bucket_name
 $ heroku config:set AWS_ACCESS_KEY_ID=your_access_key_id
 $ heroku config:set AWS_SECRET_ACCESS_KEY=your_secret_access_key
@@ -180,7 +182,8 @@ To set this up locally, you can do one of two things; set your key credentials i
 When you upload images, they should be set to `http://s3.amazonaws.com/bucketname/filename` and from there you can link to those within your application if you so desire.
 
 Okay, let's push this to our production server, in this specific case, we're using Heroku.
-```plain
+
+```
 $ git push heroku master
 $ heroku run bundle exec rake db:migrate
 ```
