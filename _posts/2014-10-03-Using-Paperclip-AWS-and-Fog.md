@@ -24,9 +24,9 @@ gem 'fog'
 {% endhighlight %}
 Then go to your terminal and run a `bundle install`
 
-```
+{% highlight python %}
 $ bundle install
-```
+{% endhighlight %}
 
 From here, we can start implementing some code in our file.
 
