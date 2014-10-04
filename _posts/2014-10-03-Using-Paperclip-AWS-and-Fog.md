@@ -50,7 +50,6 @@ Now let's create and run our migration.
 
 ```
 $ rails generate paperclip item image
-
 $ rake db:migrate
 ```
 
@@ -169,9 +168,9 @@ Once you have your bucket set up, you need to make it public, go to to your buck
 Now that you have all this information, you'll need to set those variables for your production server in your terminal.
 
 ```
-$ heroku config:set S3_BUCKET_NAME=your_bucket_name
-$ heroku config:set AWS_ACCESS_KEY_ID=your_access_key_id
-$ heroku config:set AWS_SECRET_ACCESS_KEY=your_secret_access_key
+$ heroku config:set S3_BUCKET_NAME=your_bucket_name</br>
+$ heroku config:set AWS_ACCESS_KEY_ID=your_access_key_id</br>
+$ heroku config:set AWS_SECRET_ACCESS_KEY=your_secret_access_key</br>
 $ heroku config:set S3_BUCKET_NAME=appname-assets
 ```
 
@@ -186,7 +185,6 @@ Okay, let's push this to our production server, in this specific case, we're usi
 ```
 $ git push heroku master
 $ heroku run bundle exec rake db:migrate
-
 ```
 
 Alright, you're all set up! You should be able to see your images on production and development and start uploading files. Hope you enjoyed reading and if you have any questions, hit me up!
