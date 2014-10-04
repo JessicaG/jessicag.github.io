@@ -35,7 +35,7 @@ From here, we can start implementing some code in our file.
 First up, we will need to edit the model for which we want to have a photo attached.
 I personally had items, so we will use that for an example here.
 
-{% highlight ruby %}
+{% highlight ruby linenos%}
 class Item < ActiveRecord::Base
 
 has_attached_file :image, styles: {:medium => "300x300>", :thumb => "100x100"}
@@ -48,16 +48,16 @@ We are setting the size of images with nicknames as well as the types that are a
 
 Now let's create and run our migration.  
 
-```
+{% highlight python %}
 $ rails generate paperclip item image
 $ rake db:migrate
-```
+{% endhighlight %}
 
 Now we are ready to work on our view; again I will show the file in reference to the items, but this is applicable for any form where you are looking to have the upload attached.
 
 If you have a form currently, it probably looks something like this:
 
-{% highlight ruby %}
+{% highlight ruby linenos%}
 <%= form_for(@item) do |f| %>
   ....
    <%= f.label :title %><br/>
@@ -68,7 +68,7 @@ If you have a form currently, it probably looks something like this:
 
 We are going to change that to add a `html: {multipart: true}` and then our `label: image` and `file_field :image`.
 
-{% highlight ruby %}
+{% highlight ruby linenos%}
 <%= form_for(@item, html: {multipart: true}) do |f| %>
   ...
   <%= f.label :image %>
@@ -78,7 +78,7 @@ We are going to change that to add a `html: {multipart: true}` and then our `lab
 {% endhighlight %}
 Next up, over to our items controller, you'll need to permit `image` to be part of your strong params method. I typically make this private as good practice.
 
-{% highlight ruby %}
+{% highlight ruby linenos%}
 private
 
  	def item_params
@@ -99,7 +99,7 @@ Alright, we're done with Paperclip and we can now upload images locally, hooray!
 Since we already have the gem's that we need installed; let's move forward into setting our environments.
 
 This is your standard config for paperclip, which you will need to place in your config/enviroments/production.rb
-{% highlight ruby %}
+{% highlight ruby linenos%}
 config.paperclip_defaults = {
     :storage => :s3,
     :s3_credentials => {
@@ -112,7 +112,7 @@ config.paperclip_defaults = {
 {% endhighlight %}
 
 Since we're going to use Fog to help with our cloud storage, it looks slightly different.
-{% highlight ruby %}
+{% highlight ruby linenos%}
   config.paperclip_defaults = {
     :storage => :fog,
     :fog_credentials => {
@@ -138,9 +138,9 @@ Prerequisites:
 
 On a mac, you can install imagemagick pretty easily with homebrew
 
-```
+{% highlight python%}
 brew install imagemagick
-```
+{% endhighlight %}
 
 First, navigate to your Amazon Web Services (AWS) S3 account dashboard.
 ![alt tag](/images/aws_screenshot.png)
@@ -148,7 +148,7 @@ If you don't have one already, create a ney key and grab that access key and sec
 
 Next up, you'll want to create a bucket for your images to go into, be cautious of your naming here; no special characters are allowed.
 Once you have your bucket set up, you need to make it public, go to to your bucket permissions and add this script in your policy editor with your bucket name:
-{% highlight ruby %}
+{% highlight python %}
 {
 	"Version": "2008-10-17",
 	"Id": "Policy1412226028722",
@@ -182,9 +182,9 @@ When you upload images, they should be set to `http://s3.amazonaws.com/bucketnam
 
 Okay, let's push this to our production server, in this specific case, we're using Heroku.
 
-```
+{% highlight python %}
 $ git push heroku master
 $ heroku run bundle exec rake db:migrate
-```
+{% endhighlight %}
 
 Alright, you're all set up! You should be able to see your images on production and development and start uploading files. Hope you enjoyed reading and if you have any questions, hit me up!
