@@ -76,7 +76,8 @@ realized there were a few problems.
 
 We've all had it, but when you're a junior and even moreso when you
 belong to a minority, it's tough. There are a lot of things contributing
-to this within the tech scene, let's go through them.
+to this within the tech scene, let's go through them. Fun fact, in the
+Marketing industry, there are 56% women. Tech? **26% women**
 
 * Interrogation interviews
   - The round the table board room interviews and Whiteboarding. It has
@@ -107,28 +108,50 @@ looking to learn a bit more and try out their skills.
 * Poor mannerisms online
  - I'd say Stack Overflow and Reddit are the worst violators of this, in
    that the community is very hard to break into with an opinion as a
-newbie. 
+newbie. You ask questions there are you are either immediately
+casterized as being an idiot or you don't get a reply. So that's
+helpful. *eyeroll*
 
-- Cycling through when you're *Unconsciously incompetent*, where you don't know what you don't know.  *Conscious incompetence*, where you are accutely aware of what you don't know and it can be a scary place. *Conscious competence*, where you are begining to know what you know and what you don't know. *Unconscious competence*, where you know what you know and things start to become second nature.
+* Understanding where you are
+- The four stages of competence is a great way to think of the process of becoming a junior developer. Cycling through when you're *Unconsciously incompetent*, where you don't know what you don't know.  *Conscious incompetence*, where you are accutely aware of what you don't know and it can be a scary place. *Conscious competence*, where you are begining to know what you know and what you don't know. *Unconscious competence*, where you know what you know and things start to become second nature.
 
-Get a good support system (aka Women Who Code, Girl Developit, mentors within your community)
-Coding buddy: find someone that is going through the same things, use eachother as support
-Fake it til you make it: Be engaged in the community and don't let the fear of doing something take over what will make you stronger.
+* What you can do to help
+- Get a good support system (aka Women Who Code, Girl Developit, mentors within your community)
+- Coding buddy: find someone that is going through the same things, use eachother as support
+- Fake it til you make it: Be engaged in the community and don't let the fear of doing something take over what will make you stronger.
 
 ##What's the Timeline
 
 Becoming a developer in a self-taught way, changing careers, it's tough.
-It can be much more time than one realizes. Let's take a look at that.
+You get what you put into it and it can be much more time than one realizes. Let's take a look at that.
 
-Minimum one year, assuming a 6 month intensive code school
+Minimum one year, assuming a 6 month intensive code school otherwise
+you're looking at minimum two years self-study (part time) to get you
+up and running.
 
-2 years self-study
+- Three month versus Six month programs
+  * Three months is not enough, you get one day of javascript, which
+    casuses you to be missing out on the full stack. Beyond that, you're not getting full design principles
 
-Three month versus Six month programs
-* 3 months is not enough
-* 1 day of javascript
-* missing out on full stack
-* not getting full design principles
+- The Money Problem
+  * Code schools cost anywhere $5k-$20k
+  * Additional $20k needed to live frugally
+  * Being dependent on your partner or     footing the bill on your own
+  * Intern/junior wages
+  * Average of 6 months and $20k, not inclusive of living expenses.
+  * Classism – huge gap between the haves and have not’s
+  * How do you do it? Study on your own for 3-6 months, live frugally, save money. Go to code school program and study exclusively that.  Be prepared to not see your friends for 6 months.
+
+## Meeting Halfway
+- But those of us learning to code, don’t actually know what the gap is, because “we don’t know what we don’t know.” And frankly, there are NO INDUSTRY STANDARDS TELLING US. On top of that, we aren’t getting any feedback. We are being told that we need more practice, more training. So how can we fix that?
+
+  * Better communications from companies
+  * Two mentors one male/one female
+  * Assigned bugs, projects, real work
+  * Review assignments beginning of each day
+  * Pair for 30 minutes each day
+  * Required work outside of office (eg open source, classes, meetups)
+  * Have progress check-ins every two weeks: be agile!
 
 ##Available Resources
 CodeSchool, Portland Code School, TuringIO, DevBootcamp
@@ -137,23 +160,52 @@ Conferences! (RMRC, Oscon, Waza)
 
 
 ##Fear of Open Source
-JUDGEMENT
-How can this community help overcome that?
-Be kind. (Is it true, kind, necessary?)
-If you can't say anything nice, don't say anything at all.
-(Everything I need to know I learned in kindergarten.)
+- Putting something out there for everyone to see is HARD. There are a lot of factors that come up, especially for a newbie.
+  * What do you mean people can see my code?
+  * What if I’m not good enough
+  * What will happen when I’m wrong
+  * JUDGEMENT
+  * How can this community help overcome that?
+
+How can you begin to solve this? Pairing up with a mentor and contribute to Open Source projects
+
+##The Feedback
+I like to think you should use the Buddhist philopshy before starting
+the feedback loop.
+
+  * Is it kind?
+  * Is it true?
+  * Is it necessary?
+
+Constructive feedback is key to any profession, regardless of the
+industry, but being very clear on what exactly should change is best for
+juniors as they really don't know what they don't know. That's hard to
+take feedback and run with it if it's not clear enough.
 
 ##How to Bridge the Gap
 
-Better job descriptions, a clearer understanding of what exactly is
-expected
+So with all of these challenges how DO we bridge the gap?
+  * Engage the junior developers
+  * Be conscious of interview tactics
+  * Remove “plug and play” mentality
+  * Have an “I want to hire you” attitude
 
-Dedicating a percentage of time from your senior devs to spend with
+- Work on a better job descriptions, a clearer understanding of what exactly is
+expected. ie two years in Javascript, proficient Ruby skills, one year
+working in a production environment.
+
+- Dedicating a percentage of time from your senior devs to spend with
 junior devs each week, evalutate at the end of the week, keep a strong
 and concise feedback loop
 
-Engage with junior devs in your community, reach out and help them get
+- Engage with junior devs in your community, reach out and help them get
 to the next level
+- Stop interviewing with more than 2 people.
+
+- Try to include a woman when interviewing. Balance the equation.
+
+- What does this candidate need to succeed? She is great at ruby, but doesn’t know SQL, PostGres or have any real database experience. Can we teach her what she doesn’t know?
+
 
 
 
